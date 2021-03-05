@@ -1,4 +1,4 @@
-# newbee
+# WatchAuto
 
 > A Vue.js project
 
