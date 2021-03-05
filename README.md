@@ -1,6 +1,6 @@
 # WatchAuto
 
-> A Vue.js project
+> 一个自己用的根据自己意愿看bl视频网站
 
 ## Build Setup
 
