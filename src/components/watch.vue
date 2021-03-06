@@ -1,17 +1,19 @@
 <template>
   <div class="hello">
-    <p>
+    <!-- <p>
         <iframe class="bilivideo" src="//player.bilibili.com/player.html?bvid=BV1nD4y197gW&amp;page=3" frameborder="0" framespacing="0" allowfullscreen="true" > </iframe>
-    </p>
+    </p> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'watch',
+  props: ['IDArr'],
   data () {
     return {
-      msg: 'hello'
+      msg: 'hello',
+      UPname: this.IDArr
     }
   }
 }

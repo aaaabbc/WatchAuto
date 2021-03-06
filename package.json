@@ -1,5 +1,5 @@
 {
-  "name": "newbee",
+  "name": "watchauto",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "aaaabbc <921864911@qq.com>",
@@ -14,8 +14,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "element-ui": "^2.13.2",
     "vue": "^2.5.2",
+    "axios": "^0.21.1",
+    "element-ui": "^2.13.2",
+    "vue-axios": "^3.2.4",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
