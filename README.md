@@ -1,6 +1,7 @@
 # WatchAuto
 
 > 一个自己用的根据自己意愿看bl视频网站
+> v0.0.2: 新增导航栏,新增同级组件通讯(bar与watch).
 
 ## Build Setup
 
