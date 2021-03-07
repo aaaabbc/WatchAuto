@@ -1,11 +1,9 @@
 <template>
     <div class="finded">
-        <bar class="comBar"></bar>
-        <!-- <p>
-            <router-link to="/watch">{{ use }}</router-link>
-        </p> -->
-        <watch :IDArr="IDArr" class="comWatch"></watch>
-        <!-- <router-view></router-view> -->
+        <div class="comBar">
+            <bar></bar>
+        </div>
+        <watch class="comWatch"></watch>
     </div>
 </template>
 
@@ -16,7 +14,6 @@ export default {
   name: 'finded',
   data () {
     return {
-      use: 'aaa',
       IDArr: [],
       itemLen: Number,
       getData: {}
@@ -31,16 +28,23 @@ export default {
 
 <style scoped>
 
-    .bar {
-        width: 20%;
+    .comBar {
+        width: 20px;
         height: 100%;
+        background-image: linear-gradient(to left, white 0%, teal 100%);
         min-width: 235px;
         max-width: 250px;
     }
 
+    .comWatch {
+        float: right;
+        width: 80%;
+    }
+
     .finded {
-        background-color: teal;
-        height: 1000px;
+        background-color: white;
+        height: 800px;
+        display: flex;
     }
 
     li {

@@ -1,9 +1,6 @@
 <template>
   <div class="hello">
-    <!-- <p>
-        <iframe class="bilivideo" src="//player.bilibili.com/player.html?bvid=BV1nD4y197gW&amp;page=3" frameborder="0" framespacing="0" allowfullscreen="true" > </iframe>
-    </p> -->
-    <a :href="url">看看我aaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+    <iframe v-if="url" :src="url" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
   </div>
 </template>
 
@@ -11,17 +8,14 @@
 import Bar from '../bar'
 export default {
   name: 'watch',
-  props: ['IDArr'],
   data () {
     return {
-      url: '',
-      msg: 'hello',
-      UPname: this.IDArr
+      url: ''
     }
   },
   created () {
     Bar.$on('bar', url => {
-      this.url = url
+      this.url = '//player.bilibili.com/player.html?bvid=' + url.slice(31) + '&amp;page=1'
     })
   }
 }
@@ -30,12 +24,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-    .bilivideo{
-        position: relative;
-        left:30%;
+    iframe {
+        position: absolute;
+        right: 20%;
         top: 100px;
         height:400px;
-        width:40%;
+        width:80%;
+        min-width: 500px;
+        max-width: 580px;
     }
 
 </style>
