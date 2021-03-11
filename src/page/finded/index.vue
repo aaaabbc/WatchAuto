@@ -29,20 +29,25 @@ export default {
 <style scoped>
 
     .comBar {
-        width: 20px;
-        height: 100%;
-        background-image: linear-gradient(to left, white 0%, teal 100%);
+        border-radius: 20px;
+        margin-top: 10px;
+        margin-right: 10px;
+        width: 20%;
+        height: 95%;
+        background-color: #e0e0e0;
         min-width: 235px;
         max-width: 250px;
     }
 
     .comWatch {
+        padding-top: 10%;
+        padding-left: 15%;
         float: right;
         width: 80%;
     }
 
     .finded {
-        background-color: white;
+        background-color: #fcfcfc;
         height: 800px;
         display: flex;
     }

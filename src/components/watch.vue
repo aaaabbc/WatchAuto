@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <iframe v-if="url" :src="url" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <div class="biliVideo">
+      <iframe width="500px" height="400px" v-if="url" :src="url" frameborder="0" allowfullscreen> </iframe>
+    </div>
   </div>
 </template>
 
@@ -24,7 +26,22 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-    iframe {
+    .biliVideo {
+        width: 100%;
+        height: 0;
+        position: relative;
+        padding-bottom: 80%;
+    }
+
+    .biliVideo iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    /* iframe {
         position: absolute;
         right: 20%;
         top: 100px;
@@ -32,6 +49,6 @@ export default {
         width:80%;
         min-width: 500px;
         max-width: 580px;
-    }
+    } */
 
 </style>
