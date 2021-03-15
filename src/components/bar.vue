@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     skip (a) {
-      Bar.$emit('bar', this.getData[a]['url'])
+      Bar.$emit('bar', this.getData[a])
       // 发给组件watch
     },
     addItem () {
@@ -31,10 +31,14 @@ export default {
     }
   },
   created () {
-    this.$axios.get('../static/value.json').then((resp) => {
+    this.$axios.get('../static/data.json').then((resp) => {
       this.itemLen = Object.keys(resp.data).length
       this.getData = resp.data
     })
+    // fetch('D:/learngit/data.json').then((resp) => {
+    //   this.itemLen = Object.keys(resp.data).length
+    //   this.getData = resp.data
+    // })
   }
 }
 </script>

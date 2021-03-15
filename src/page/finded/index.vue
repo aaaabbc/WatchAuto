@@ -28,10 +28,15 @@ export default {
 
 <style scoped>
 
+    body {
+        background-color: #000;
+    }
+
     .comBar {
         border-radius: 20px;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-right: 10px;
+        margin-left: 20px;
         width: 20%;
         height: 95%;
         background-color: #e0e0e0;
@@ -40,15 +45,15 @@ export default {
     }
 
     .comWatch {
-        padding-top: 10%;
+        padding-top: 5%;
         padding-left: 15%;
         float: right;
         width: 80%;
     }
 
     .finded {
-        background-color: #fcfcfc;
-        height: 800px;
+        background-color: rgba(0, 0, 0, 0);
+        height: 900px;
         display: flex;
     }
 

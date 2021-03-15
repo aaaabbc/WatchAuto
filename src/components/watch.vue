@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <div class="biliVideo">
-      <iframe width="500px" height="400px" v-if="url" :src="url" frameborder="0" allowfullscreen> </iframe>
+      <p class="bilititle">{{ title }}</p>
+      <iframe width="800px" height="640px" v-if="url" :src="url" frameborder="0" allowfullscreen> </iframe>
     </div>
   </div>
 </template>
@@ -12,12 +13,14 @@ export default {
   name: 'watch',
   data () {
     return {
-      url: ''
+      url: '',
+      title: ''
     }
   },
   created () {
-    Bar.$on('bar', url => {
-      this.url = '//player.bilibili.com/player.html?bvid=' + url.slice(31) + '&amp;page=1'
+    Bar.$on('bar', data => {
+      this.url = '//player.bilibili.com/player.html?bvid=' + data['url'] + '&amp;page=1'
+      this.title = data['title']
     })
   }
 }
@@ -25,6 +28,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+    .bilititle {
+      align-content: center;
+    }
 
     .biliVideo {
         width: 100%;
@@ -35,7 +42,7 @@ export default {
 
     .biliVideo iframe {
         position: absolute;
-        top: 0;
+        top: 100px;
         right: 0;
         left: 0;
         bottom: 0;
