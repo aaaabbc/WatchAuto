@@ -17,6 +17,12 @@
 
 ## Build Setup
 
+```
+# 打开服务器
+\WatchAuto\server> node index.js
+```
+
+\WatchAuto>
 ``` bash
 # install dependencies
 npm install
