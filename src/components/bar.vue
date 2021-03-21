@@ -5,7 +5,7 @@
             <input class="addInput" type="text" />
             <button class="addBtn" @click="addItem">添加</button>
         </div>
-        <button class="chooseUP" v-for="(item, index) in getData" :key="item.UID" @click="skip(index)">{{item.name}}</button>
+        <button class="chooseUP" v-for="(item, index) in getData" :key="item.UID" @click="skip(index)">{{index}}</button>
     </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   data () {
     return {
       url: 'https://space.bilibili.com/',
-      itemLen: Number,
+      // itemLen: Number,
       getData: {}
     }
   },
@@ -30,9 +30,10 @@ export default {
     }
   },
   created () {
-    this.$axios.get('../static/data.json').then((resp) => {
-      this.itemLen = Object.keys(resp.data).length
-      this.getData = resp.data
+    this.$axios.get('/api/getVideo').then((resp) => {
+      this.getData = resp.data.data
+      // this.itemLen = Object.keys(this.getData).length
+      console.log(this.getData)
     })
     // fetch('D:/learngit/data.json').then((resp) => {
     //   this.itemLen = Object.keys(resp.data).length
@@ -45,6 +46,8 @@ export default {
 <style scoped>
 
     .addInput {
+        padding-left: 10px;
+        margin-right: 10px;
         width: 90%;
         height: 30px;
         border-radius: 10px;
