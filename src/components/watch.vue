@@ -19,8 +19,8 @@ export default {
   },
   created () {
     Bar.$on('bar', data => {
-      this.url = '//player.bilibili.com/player.html?bvid=' + data['url'] + '&amp;page=1'
-      this.title = data['title']
+      this.url = '//player.bilibili.com/player.html?bvid=' + data[0] + '&amp;page=1'
+      this.title = data[1]
     })
   }
 }
