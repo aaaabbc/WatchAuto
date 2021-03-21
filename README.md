@@ -22,7 +22,6 @@
 \WatchAuto\server> node index.js
 ```
 
-\WatchAuto>
 ``` bash
 # install dependencies
 npm install
